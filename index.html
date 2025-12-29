@@ -1,225 +1,178 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Little Useful Apps</title>
-  <meta name="description" content="Small, privacy-friendly apps that solve everyday problems simply and reliably." />
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Small, fast tools that solve everyday problems — without bloat." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
+  <header class="site-header">
+    <div class="container header-inner">
       <a class="brand" href="/" aria-label="Little Useful Apps home">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Little Useful Apps</h1>
-          <p>Small tools. Big relief.</p>
-        </div>
+        <span class="brand-mark" aria-hidden="true">▣</span>
+        <span class="brand-text">
+          <span class="brand-title">Little Useful Apps</span>
+          <span class="brand-subtitle">Tiny tools. Real utility.</span>
+        </span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="btn" href="#apps">Apps</a>
-        <a class="btn" href="#privacy">Privacy</a>
-        <a class="btn" href="#contact">Contact</a>
+      <nav class="nav">
+        <a class="nav-link" href="#apps">Apps</a>
+        <a class="nav-link" href="#privacy">Privacy</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
+  <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-inner">
-        <div class="kicker">
+      <div class="container">
+        <div class="hero-badge">
           <span class="dot" aria-hidden="true"></span>
-          Privacy-friendly • Lightweight • No nonsense
+          <span>Simple utility apps by Little Useful Apps</span>
         </div>
 
-        <h2>Small apps for everyday moments.</h2>
-        <p>
-          Little Useful Apps builds focused, privacy-friendly tools that remove friction
-          from common tasks — fast, simple, and reliable.
+        <h1 class="hero-title">
+          Small, fast tools that solve everyday problems.
+          <span class="hero-title-accent">No bloat.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Built to be quick, clear, and helpful — with a strong focus on privacy and a great mobile experience.
         </p>
 
-        <div class="pill-row" aria-label="Studio values">
-          <div class="pill">No accounts</div>
-          <div class="pill">No tracking</div>
-          <div class="pill">Local-first</div>
-          <div class="pill">Honest pricing</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#apps">Explore apps</a>
+          <a class="btn btn-ghost" href="#privacy">Privacy policies</a>
+        </div>
+
+        <div class="hero-stats" role="list" aria-label="Key values">
+          <div class="stat" role="listitem">
+            <div class="stat-title">Fast</div>
+            <div class="stat-text">Designed for quick use</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-title">Simple</div>
+            <div class="stat-text">No accounts, no clutter</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-title">Privacy-first</div>
+            <div class="stat-text">Minimal data by default</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="section-title" id="apps">
-      <div>
-        <h3>Apps</h3>
-        <p>Tap an app to view its page and privacy policy.</p>
-      </div>
-      <p class="small">Tip: copy the “APP CARD TEMPLATE” to add new apps fast.</p>
-    </div>
+    <!-- APPS -->
+    <section id="apps" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Apps</h2>
+          <p class="section-subtitle">Each app has a dedicated page and privacy policy under this domain.</p>
+        </div>
 
-    <!-- APPS GRID -->
-    <section class="grid two-col" aria-label="Apps list">
-
-      <!-- TABFAIR CARD -->
-      <article class="card">
-        <div class="card-inner">
-          <div class="card-top">
-            <div class="app-head">
-              <div class="app-icon" aria-hidden="true"></div>
-              <div>
-                <h4 class="appname">Tabfair</h4>
-                <div class="tag">
-                  <span class="badge">Live</span>
-                  Split the tab in about 30 seconds
-                </div>
+        <div class="grid">
+          <!-- TABFAIR CARD -->
+          <article class="card app-card">
+            <div class="card-top">
+              <div class="app-icon" aria-hidden="true">
+                <span>TB</span>
+              </div>
+              <div class="app-meta">
+                <h3 class="card-title">Tabfair</h3>
+                <p class="card-kicker">Split the tab in about 30 seconds.</p>
               </div>
             </div>
-          </div>
 
-          <p class="desc">
-            A clean bill-splitting app for real-world dining. Enter what’s on the receipt,
-            split evenly or custom, and share totals instantly.
-          </p>
+            <ul class="bullets">
+              <li>Even split or custom amounts</li>
+              <li>Tax + tip support (percent or fixed)</li>
+              <li>Optional rounding per person</li>
+              <li>Share results quickly</li>
+            </ul>
 
-          <ul class="features" aria-label="Tabfair features">
-            <li>Even + custom splits</li>
-            <li>Tax & tip options</li>
-            <li>Pre-/post-tax tipping</li>
-            <li>Multi-currency display</li>
-          </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="/tabfair/">Open app page</a>
+              <a class="btn btn-ghost" href="/tabfair/privacy.html">Privacy policy</a>
+            </div>
 
-          <div class="actions" aria-label="Tabfair links">
-            <!-- If you don’t have a /tabfair/ page yet, you can remove this button for now -->
-            <a class="primary" href="/tabfair/" aria-label="Tabfair app page">View app page</a>
-            <a href="/tabfair/privacy.html" aria-label="Tabfair privacy policy">Privacy policy</a>
+            <p class="fineprint">Note: Currency selection is display-only (no conversion).</p>
+          </article>
 
-            <!-- Replace # with your store URLs when live -->
-            <a href="#" aria-label="Google Play link placeholder">Google Play (soon)</a>
-            <a href="#" aria-label="App Store link placeholder">App Store (later)</a>
-          </div>
-
-          <p class="small" style="margin:14px 0 0;">
-            Developer note: Tabfair calculates only what you enter — no assumptions.
-          </p>
-        </div>
-      </article>
-
-      <!-- WHY THIS EXISTS -->
-      <article class="card">
-        <div class="card-inner">
-          <h4 style="margin-top:0;">Why Little Useful Apps?</h4>
-          <p class="desc">
-            Many apps are bloated, intrusive, or over-engineered.
-            We focus on small tools that respect your time and privacy,
-            and do exactly what they say — nothing more.
-          </p>
-          <p class="small" style="margin:0;">
-            Each app has a dedicated privacy policy page you can link directly in the app stores.
-          </p>
-        </div>
-      </article>
-
-      <!-- APP CARD TEMPLATE (COPY THIS BLOCK FOR NEW APPS) -->
-      <!--
-      <article class="card">
-        <div class="card-inner">
-          <div class="card-top">
-            <div class="app-head">
-              <div class="app-icon" aria-hidden="true"></div>
-              <div>
-                <h4 class="appname">New App Name</h4>
-                <div class="tag">
-                  <span class="badge">Coming soon</span>
-                  Short one-line tagline
-                </div>
+          <!-- TEMPLATE CARD: COPY THIS FOR NEW APPS -->
+          <article class="card app-card app-card--template">
+            <div class="card-top">
+              <div class="app-icon app-icon--template" aria-hidden="true">
+                <span>+</span>
+              </div>
+              <div class="app-meta">
+                <h3 class="card-title">Next App</h3>
+                <p class="card-kicker">A short, punchy one-liner about what it does.</p>
               </div>
             </div>
+
+            <ul class="bullets">
+              <li>Feature #1</li>
+              <li>Feature #2</li>
+              <li>Feature #3</li>
+            </ul>
+
+            <div class="card-actions">
+              <a class="btn btn-primary" href="#" aria-disabled="true" onclick="return false;">Coming soon</a>
+              <a class="btn btn-ghost" href="#privacy">Privacy policy</a>
+            </div>
+
+            <p class="fineprint">Tip: Duplicate this card when you publish a new app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="privacy" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Privacy</h2>
+          <p class="section-subtitle">
+            We aim to collect as little data as possible. Each app has a clearly posted privacy policy.
+          </p>
+        </div>
+
+        <div class="privacy-box">
+          <div class="privacy-item">
+            <h3>Tabfair</h3>
+            <p>Privacy policy for Tabfair.</p>
+            <a class="btn btn-ghost" href="/tabfair/privacy.html">View Tabfair privacy policy</a>
           </div>
 
-          <p class="desc">
-            1–2 sentences describing what the app does and who it’s for.
-          </p>
-
-          <ul class="features">
-            <li>Feature #1</li>
-            <li>Feature #2</li>
-            <li>Feature #3</li>
-            <li>Feature #4</li>
-          </ul>
-
-          <div class="actions">
-            <a class="primary" href="/newapp/">View app page</a>
-            <a href="/newapp/privacy.html">Privacy policy</a>
-            <a href="#">Google Play (soon)</a>
-            <a href="#">App Store (later)</a>
+          <div class="privacy-item">
+            <h3>Contact</h3>
+            <p>Questions or support? Use the contact method listed in the app store listing.</p>
+            <span class="pill">No support chat tracking</span>
           </div>
-
-          <p class="small" style="margin:14px 0 0;">
-            Optional note for reviewers/users.
-          </p>
         </div>
-      </article>
-      -->
-
+      </div>
     </section>
+  </main>
 
-    <div class="section-title" id="privacy">
-      <div>
-        <h3>Privacy</h3>
-        <p>Simple, readable privacy policies for each app.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Little Useful Apps</div>
+        <div class="footer-note">Built for simplicity. Minimal data. Clear policies.</div>
+      </div>
+
+      <div class="footer-right">
+        <a class="footer-link" href="#apps">Apps</a>
+        <a class="footer-link" href="#privacy">Privacy</a>
+        <a class="footer-link" href="/">Home</a>
       </div>
     </div>
-
-    <section class="grid" aria-label="Privacy info">
-      <article class="card">
-        <div class="card-inner">
-          <h4 style="margin-top:0;">Our privacy approach</h4>
-          <p class="desc">
-            We aim for local-first utilities that work without accounts or unnecessary data collection.
-            Each app has its own privacy policy page you can link in Google Play and the App Store.
-          </p>
-          <p class="small" style="margin:0;">
-            Tabfair privacy policy:
-            <code class="inline">/tabfair/privacy.html</code>
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <div class="section-title" id="contact">
-      <div>
-        <h3>Contact</h3>
-        <p>One support email across your listings keeps everything simple.</p>
-      </div>
-    </div>
-
-    <section class="grid" aria-label="Contact">
-      <article class="card">
-        <div class="card-inner">
-          <p class="desc" style="margin-top:0;">
-            For support questions, contact us via your app store listing, or set up an email like
-            <code class="inline">support@littleusefulapps.com</code>.
-          </p>
-          <p class="small" style="margin:0;">
-            Store URLs you’ll paste:
-            <code class="inline">https://littleusefulapps.com</code> and
-            <code class="inline">https://littleusefulapps.com/tabfair/privacy.html</code>
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <footer>
-      <div class="small">© <span id="year"></span> Little Useful Apps · Built with care</div>
-      <div class="small">
-        <a href="#apps">Apps</a> ·
-        <a href="/tabfair/privacy.html">Privacy</a> ·
-        <a href="mailto:support@littleusefulapps.com">Support</a>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </footer>
 </body>
 </html>

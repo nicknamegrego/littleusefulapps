@@ -77,16 +77,28 @@
         </div>
 
         <div class="grid">
-          <!-- TABFAIR CARD -->
-          <article class="card app-card">
+          <!-- TABFAIR CARD (BLUE THEME) -->
+          <article class="card app-card app-card--tabfair">
             <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <span>TB</span>
+              <div class="app-icon app-icon--tabfair" aria-hidden="true">
+                <!-- Simple "split bill" SVG icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" opacity=".18"/>
+                  <path d="M9 8h6M9 11h6M9 14h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".65"/>
+                </svg>
               </div>
               <div class="app-meta">
                 <h3 class="card-title">Tabfair</h3>
                 <p class="card-kicker">Split the tab in about 30 seconds.</p>
               </div>
+            </div>
+
+            <div class="chip-row" aria-label="Highlights">
+              <span class="chip">Even + custom split</span>
+              <span class="chip">Tax + tip</span>
+              <span class="chip">Rounding</span>
+              <span class="chip">Share</span>
             </div>
 
             <ul class="bullets">
@@ -97,11 +109,11 @@
             </ul>
 
             <div class="card-actions">
-              <a class="btn btn-primary" href="/tabfair/">Open app page</a>
-              <a class="btn btn-ghost" href="/tabfair/privacy.html">Privacy policy</a>
+              <a class="btn btn-primary btn-tabfair" href="/tabfair/">Open app page</a>
+              <a class="btn btn-ghost btn-tabfair-ghost" href="/tabfair/privacy.html">Privacy policy</a>
             </div>
 
-            <p class="fineprint">Note: Currency selection is display-only (no conversion).</p>
+            <p class="fineprint">Currency selection is display-only (no conversion).</p>
           </article>
 
           <!-- TEMPLATE CARD: COPY THIS FOR NEW APPS -->
@@ -153,7 +165,7 @@
           <div class="privacy-item">
             <h3>Contact</h3>
             <p>Questions or support? Use the contact method listed in the app store listing.</p>
-            <span class="pill">No support chat tracking</span>
+            <span class="pill">No tracking support widget</span>
           </div>
         </div>
       </div>

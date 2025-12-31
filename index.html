@@ -1,104 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Little Useful Apps</title>
-  <meta name="description" content="Simple, focused mobile apps that solve everyday problems." />
-
-  <!-- Favicon & App Icon -->
-  <link rel="icon" href="/assets/tabfair-icon.png" />
-  <link rel="apple-touch-icon" href="/assets/tabfair-icon.png" />
-  <meta property="og:image" content="https://littleusefulapps.com/assets/tabfair-icon.png" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Simple, focused apps that save time and stay out of your way." />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">◦</span>
         <span class="brand-name">Little Useful Apps</span>
-      </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#apps">Apps</a>
+        <a href="mailto:support@littleusefulapps.com">Support</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
-      <div class="container hero-inner">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Simple • Useful • No clutter</p>
+          <h1>Everyday apps that just do the thing.</h1>
+          <p class="subhead">
+            Little Useful Apps builds small, focused tools that save time, avoid friction,
+            and stay out of your way.
+          </p>
 
-        <span class="badge">Simple • Useful • No clutter</span>
+          <div class="chip-row">
+            <span class="chip">No accounts</span>
+            <span class="chip">Works offline</span>
+            <span class="chip">Fast & focused</span>
+          </div>
 
-        <div class="hero-app">
-          <img src="/assets/tabfair-icon.png" alt="Tabfair app icon" class="hero-app-icon" />
-          <div class="hero-app-text">
-            <div class="hero-app-name">Tabfair</div>
-            <div class="hero-app-tag">Split the tab in about 30 seconds</div>
+          <div class="cta-row">
+            <a class="btn primary" href="#apps">View apps</a>
+            <a class="btn ghost" href="/tabfair/">See Tabfair</a>
           </div>
         </div>
 
-        <h1>Everyday apps that just do the thing.</h1>
-        <p class="hero-sub">
-          Little Useful Apps builds small, focused tools that save time,
-          avoid friction, and stay out of your way.
-        </p>
+        <div class="hero-card" aria-label="Featured app">
+          <div class="featured">
+            <div class="featured-top">
+              <img class="app-icon" src="/assets/tabfair-icon.png" alt="Tabfair app icon" />
+              <div>
+                <div class="featured-name">Tabfair</div>
+                <div class="featured-tagline">Split the tab in about 30 seconds</div>
+              </div>
+            </div>
 
-        <div class="hero-actions">
-          <a href="#apps" class="btn-primary">View Apps</a>
+            <div class="featured-body">
+              <ul class="checklist">
+                <li>Even & custom splits</li>
+                <li>Tax & tip (pre- or post-tax)</li>
+                <li>Optional rounding</li>
+                <li>Offline-friendly</li>
+              </ul>
+
+              <div class="store-row">
+                <span class="pill muted">iOS & Android — coming soon</span>
+
+                <!-- Google Play button (enable after production release)
+                <a class="store-btn" href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" target="_blank" rel="noopener">
+                  <img src="/assets/google-play-badge.png" alt="Get it on Google Play">
+                </a>
+                -->
+              </div>
+
+              <div class="mini-links">
+                <a href="/tabfair/">Details</a>
+                <span class="dot">•</span>
+                <a href="/tabfair/privacy.html">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- APPS -->
-    <section id="apps" class="apps">
+    <section class="section" id="apps">
       <div class="container">
-        <h2>Available Apps</h2>
+        <h2>Available apps</h2>
 
-        <div class="app-grid">
-          <!-- TABFAIR CARD -->
-          <div class="app-card">
-            <div class="app-icon app-icon--tabfair">
-              <img src="/assets/tabfair-icon.png" alt="" class="app-icon-img" />
+        <div class="cards">
+          <a class="card" href="/tabfair/">
+            <div class="card-top">
+              <img class="card-icon" src="/assets/tabfair-icon.png" alt="Tabfair app icon" />
+              <div>
+                <div class="card-title">Tabfair</div>
+                <div class="card-subtitle">Fast, no-nonsense bill splitter</div>
+              </div>
             </div>
 
-            <h3>Tabfair</h3>
-            <p>
-              A fast, no-nonsense bill splitter.
-              Handles tax, tip, rounding, and uneven splits —
-              without accounts, ads, or friction.
+            <p class="card-desc">
+              Handles tax, tip, rounding, and uneven splits — without accounts, ads, or friction.
             </p>
 
-            <ul class="app-features">
-              <li>Even & custom splits</li>
-              <li>Tax & tip (pre- or post-tax)</li>
-              <li>Optional per-person rounding</li>
-              <li>Works offline</li>
-            </ul>
-
-            <div class="app-links">
-              <span class="coming-soon">iOS & Android — coming soon</span>
-              <a href="/tabfair/privacy.html" class="text-link">Privacy Policy</a>
+            <div class="card-meta">
+              <span class="pill">Offline</span>
+              <span class="pill">No accounts</span>
+              <span class="pill">Quick</span>
             </div>
-          </div>
+          </a>
 
-          <!-- FUTURE APP PLACEHOLDER -->
-          <div class="app-card app-card--placeholder">
-            <h3>More coming soon</h3>
-            <p>
-              Simple reminders, micro-utilities, and
-              everyday tools — one job per app.
+          <div class="card placeholder" aria-label="More apps coming soon">
+            <div class="card-top">
+              <div class="placeholder-icon">+</div>
+              <div>
+                <div class="card-title">More coming soon</div>
+                <div class="card-subtitle">One job per app</div>
+              </div>
+            </div>
+
+            <p class="card-desc">
+              Simple reminders, micro-utilities, and everyday tools — built to be calm and useful.
             </p>
           </div>
+        </div>
+
+        <div class="footer-cta">
+          <p class="small">
+            Want early access testing links when releases go live?
+            Email <a href="mailto:support@littleusefulapps.com">support@littleusefulapps.com</a>.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Little Useful Apps</p>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Little Useful Apps</div>
+      <div class="footer-links">
+        <a href="/tabfair/privacy.html">Privacy</a>
+        <a href="mailto:support@littleusefulapps.com">Support</a>
+      </div>
     </div>
   </footer>
 

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Early Access — Tabfair</title>
+  <meta name="description" content="Join Tabfair early access testing (Google Play). Quick steps, clear links." />
+
+  <!-- Fonts + site styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">
+          <img src="/assets/lua-mark-64.png" alt="" aria-hidden="true" />
+        </span>
+        <span class="brand-name">Little Useful Apps</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="/tabfair/">Tabfair</a>
+        <a href="/tabfair/privacy.html">Privacy</a>
+        <a href="mailto:support@littleusefulapps.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Left: Steps -->
+        <div class="hero-copy">
+          <p class="kicker">Tabfair • Early Access</p>
+          <h1>Get early access to Tabfair.</h1>
+          <p class="subhead">
+            You’ll install a pre-release version via Google Play so you can try it early and share feedback.
+            You can leave the test at any time.
+          </p>
+
+          <div class="chip-row">
+            <span class="chip">No accounts</span>
+            <span class="chip">Offline-friendly</span>
+            <span class="chip">Quick setup</span>
+          </div>
+
+          <div class="hero-card" style="box-shadow:none;">
+            <div class="featured" style="padding:16px;">
+              <div class="featured-top" style="padding-bottom:12px;">
+                <img class="app-icon" src="/assets/tabfair-icon.png" alt="Tabfair app icon" />
+                <div>
+                  <div class="featured-name">How to join</div>
+                  <div class="featured-tagline">Three quick steps</div>
+                </div>
+              </div>
+
+              <div class="featured-body">
+                <ol class="checklist" style="padding-left:18px; margin:0;">
+                  <li><strong>Join the tester group</strong> (required by Google)</li>
+                  <li><strong>Opt in to testing</strong> (enables install)</li>
+                  <li><strong>Install Tabfair</strong> from Google Play</li>
+                </ol>
+
+                <div class="cta-row" style="margin-top:14px;">
+                  <a class="btn primary"
+                     href="https://groups.google.com/g/tabfair-testers"
+                     target="_blank" rel="noopener">
+                    1) Join the Google Group
+                  </a>
+
+                  <a class="btn ghost"
+                     href="https://play.google.com/apps/testing/com.tabfair.app?hl=en"
+                     target="_blank" rel="noopener">
+                    2) Opt in to testing
+                  </a>
+                </div>
+
+                <p class="small" style="margin-top:12px;">
+                  After completing steps 1–2, install the app here:
+                  <a href="https://play.google.com/store/apps/details?id=com.tabfair.app"
+                     target="_blank" rel="noopener">
+                    Install Tabfair
+                  </a>.
+                </p>
+
+                <div class="mini-links">
+                  <a href="/tabfair/">Back to Tabfair</a>
+                  <span class="dot">•</span>
+                  <a href="/tabfair/privacy.html">Privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-cta">
+            <p class="small">
+              Having trouble? Email
+              <a href="mailto:support@littleusefulapps.com?subject=Tabfair%20Early%20Access%20Help">
+                support@littleusefulapps.com
+              </a>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Expectations -->
+        <div class="hero-card">
+          <div class="featured">
+            <div class="featured-top">
+              <img class="app-icon" src="/assets/tabfair-icon.png" alt="Tabfair app icon" />
+              <div>
+                <div class="featured-name">What to expect</div>
+                <div class="featured-tagline">Pre-release app testing</div>
+              </div>
+            </div>
+
+            <div class="featured-body">
+              <ul class="checklist">
+                <li>Early builds may change as feedback comes in</li>
+                <li>You can leave the test or uninstall at any time</li>
+                <li>Tabfair doesn’t require accounts</li>
+              </ul>
+
+              <div class="store-row">
+                <span class="pill">Feedback welcome</span>
+                <span class="pill">Low-friction testing</span>
+              </div>
+
+              <p class="small" style="margin-top:12px;">
+                Privacy-first by design. Read the
+                <a href="/tabfair/privacy.html">privacy policy</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Little Useful Apps</div>
+      <div class="footer-links">
+        <a href="/tabfair/privacy.html">Privacy</a>
+        <a href="mailto:support@littleusefulapps.com">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

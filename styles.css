@@ -1,22 +1,19 @@
 :root{
-  /* Overall vibe */
   --bg-top: #f7f8fb;
   --bg-bottom: #eef1f7;
 
   --surface: #ffffff;
   --surface-2: #fbfbfd;
 
-  --text-primary: #1f2937;     /* slate-800 */
-  --text-secondary: #4b5563;   /* slate-600 */
-  --text-muted: #6b7280;       /* slate-500 */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
 
-  --line: #e5e7eb;             /* slate-200 */
+  --line: #e5e7eb;
   --line-2: #dbe2ea;
 
-  /* Accent */
-  --accent: #3b82f6;           /* blue-500 */
-  --accent-hover: #2563eb;     /* blue-600 */
-  --accent-soft: rgba(59,130,246,0.12);
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
 
   --radius: 16px;
   --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
@@ -46,7 +43,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(247,248,251,0.82);
+  background: rgba(247,248,251,0.86);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -84,7 +81,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .brand-name{
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.2px;
 }
 
@@ -158,43 +155,66 @@ h1{
 /* Buttons */
 .cta-row{
   display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 10px 14px;
-  border-radius: 12px;
+  padding: 11px 16px;
+  border-radius: 14px;
   border: 1px solid var(--line);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
   text-decoration:none !important;
   background: var(--surface);
   color: var(--text-primary);
-  box-shadow: 0 2px 10px rgba(17,24,39,0.04);
+  box-shadow: 0 2px 10px rgba(17,24,39,0.05);
+  transition: transform .06s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(17,24,39,0.10);
+}
+
+.btn:active{
+  transform: translateY(0px);
+  box-shadow: 0 4px 14px rgba(17,24,39,0.08);
 }
 
 .btn.primary{
   background: var(--accent);
-  color: #ffffff;
+  color: #fff;
   border-color: transparent;
-  box-shadow: 0 10px 22px rgba(59,130,246,0.20);
+  box-shadow: 0 12px 24px rgba(59,130,246,0.22);
 }
-.btn.primary:hover{
-  background: var(--accent-hover);
-}
+.btn.primary:hover{ background: var(--accent-hover); }
 
 .btn.ghost{
   background: var(--surface);
 }
 .btn.ghost:hover{
   background: var(--surface-2);
+  border-color: #d7dee8;
 }
 
-/* Cards (matte, friendly) */
+/* Step flow buttons (used on Early Access) */
+.cta-column{
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
+}
+.cta-column .btn{
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* Cards */
 .hero-card{
   border-radius: var(--radius);
   border: 1px solid var(--line);
@@ -222,7 +242,7 @@ h1{
   padding: 6px;
 }
 
-.featured-name{ font-weight: 800; font-size: 16px; }
+.featured-name{ font-weight: 900; font-size: 16px; }
 .featured-tagline{ color: var(--text-secondary); font-size: 13px; margin-top: 3px; }
 
 .featured-body{ padding-top: 14px; }
@@ -308,7 +328,7 @@ h2{
   padding: 6px;
 }
 
-.card-title{ font-weight: 800; }
+.card-title{ font-weight: 900; }
 .card-subtitle{ color: var(--text-secondary); font-size: 13px; margin-top: 2px; }
 
 .card-desc{
@@ -333,7 +353,7 @@ h2{
   color: var(--text-secondary);
   background: var(--surface);
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 /* Footer */
@@ -366,7 +386,6 @@ h2{
 
 .footer-links{ display:flex; gap: 14px; }
 
-/* Mobile */
 @media (max-width: 860px){
   .hero-grid{ grid-template-columns: 1fr; }
   .cards{ grid-template-columns: 1fr; }

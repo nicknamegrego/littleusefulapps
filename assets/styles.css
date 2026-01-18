@@ -263,6 +263,52 @@ a {
   .play-badge{ height:40px; max-width:170px; }
 }
 
+/* --- Apps card actions: align Open page + Google Play badge --- */
+.app-actions{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.app-actions .btn{
+  height: 44px;              /* match badge height */
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-actions .play-badge-link{
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+}
+
+.app-actions .play-badge{
+  height: 44px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Mobile: stack cleanly */
+@media (max-width: 520px){
+  .app-actions{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app-actions .btn{
+    width: 100%;
+  }
+  .app-actions .play-badge-link{
+    width: 100%;
+  }
+  .app-actions .play-badge{
+    height: 44px;
+  }
+}
 
 
 /* Mobile */

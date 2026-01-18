@@ -202,6 +202,68 @@ a {
   align-items: center;
 }
 
+/* --- Play card layout (prevents badge from exploding) --- */
+.play-card{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:14px;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:14px;
+  background:#fff;
+}
+
+.play-app-icon{
+  width:56px;
+  height:56px;
+  border-radius:14px;
+  flex:0 0 auto;
+  object-fit:cover;
+}
+
+.play-card-body{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.play-card-title{
+  font-weight:700;
+  font-size:14px;
+  line-height:1.2;
+}
+
+.play-card-sub{
+  font-size:13px;
+  color:rgba(17,24,39,0.75);
+  line-height:1.25;
+}
+
+.play-badge-link{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+}
+
+.play-badge{
+  display:block;
+  height:44px;      /* <— key: fixed height */
+  width:auto;       /* maintain aspect ratio */
+  max-width:180px;  /* <— key: stops huge badge */
+}
+
+@media (max-width: 880px){
+  .hero-inner{ display:block; }
+  .hero-card{ margin-top:18px; }
+}
+
+@media (max-width: 520px){
+  .play-card{ gap:12px; }
+  .play-badge{ height:40px; max-width:170px; }
+}
+
+
 /* Mobile */
 @media (max-width: 900px) {
   .hero-inner {

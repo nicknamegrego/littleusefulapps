@@ -1,22 +1,32 @@
-<!-- /tabfair/index.html  (Home) -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Tabfair — Split the tab fairly</title>
-  <meta name="description" content="Tabfair helps you fairly split any tab in seconds. No accounts. No ads. Works on-device." />
+  <meta
+    name="description"
+    content="Tabfair helps you fairly split any tab in seconds. No accounts. No tracking. Works entirely on your device."
+  />
+
   <link rel="icon" href="/assets/tabfair-icon.png" />
   <link rel="stylesheet" href="/assets/tabfair.css" />
 </head>
 
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/tabfair/">
-        <img src="/assets/tabfair-icon.png" alt="Tabfair" class="brand-mark" />
-        <span class="brand-name">Tabfair</span>
-      </a>
+      <!-- Breadcrumb brand -->
+      <div class="brand">
+        <a href="/" class="lua-link">Little Useful Apps</a>
+        <span class="chevron">›</span>
+        <div class="tabfair-brand">
+          <img src="/assets/tabfair-icon.png" alt="" />
+          <span>Tabfair</span>
+        </div>
+      </div>
 
       <nav class="nav">
         <a href="/privacy.html">Privacy</a>
@@ -25,68 +35,89 @@
     </div>
   </header>
 
+  <!-- Hero -->
   <main>
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1>Split the tab fairly.</h1>
-          <p class="lead">Fast, clear bill splitting — entirely on your device.</p>
+          <p class="lead">
+            Fast, clear bill splitting — entirely on your device.
+          </p>
 
           <div class="cta-row">
             <a
-              class="btn btn-primary"
               href="https://play.google.com/store/apps/details?id=com.tabfair.app"
               target="_blank"
               rel="noopener"
+              class="google-play-badge"
             >
-              Get it on Google Play
+              <img
+                src="/assets/google-play-badge.png"
+                alt="Get it on Google Play"
+              />
             </a>
-            <a class="btn btn-ghost" href="#how-it-works">How it works</a>
+
+            <a href="#how-it-works" class="btn-secondary">How it works</a>
           </div>
 
-          <p class="fineprint">No accounts • No tracking • Optional contacts for names only</p>
+          <p class="fineprint">
+            No accounts • No tracking • Optional contacts for names only
+          </p>
         </div>
 
-        <div class="hero-card">
-          <div class="play-card">
-            <img src="/assets/tabfair-icon.png" alt="Tabfair app icon" class="play-icon" />
-            <div class="play-text">
-              <div class="play-title">Tabfair</div>
-              <div class="play-subtitle">Fairly split any tab in seconds.</div>
-              <a
-                class="play-button"
-                href="https://play.google.com/store/apps/details?id=com.tabfair.app"
-                target="_blank"
-                rel="noopener"
-              >
-                Install
-              </a>
+        <!-- Install card -->
+        <aside class="hero-card">
+          <div class="install-card">
+            <div class="install-top">
+              <img src="/assets/tabfair-icon.png" alt="" />
+              <div>
+                <strong>Tabfair</strong>
+                <span>Fairly split any tab in seconds.</span>
+              </div>
             </div>
-          </div>
 
-          <div class="micro-note">
-            Tip: if Google Play is still processing your listing, this link may show a “not found” until it’s fully live.
+            <a
+              href="https://play.google.com/store/apps/details?id=com.tabfair.app"
+              target="_blank"
+              rel="noopener"
+              class="google-play-badge small"
+            >
+              <img
+                src="/assets/google-play-badge.png"
+                alt="Get it on Google Play"
+              />
+            </a>
+
+            <p class="install-note">
+              Tip: If Google Play is still processing the listing, the link may
+              show “not found” until it’s fully live.
+            </p>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section id="how-it-works" class="section">
+    <!-- How it works -->
+    <section class="section" id="how-it-works">
       <div class="container">
         <h2>How it works</h2>
 
-        <div class="grid-3">
-          <div class="card">
+        <div class="steps">
+          <div class="step">
             <h3>Enter the receipt</h3>
             <p>Subtotal, tax, tip — and how many people are splitting.</p>
           </div>
 
-          <div class="card">
+          <div class="step">
             <h3>Add names (optional)</h3>
-            <p>Import contact display names if you want. Nothing is transmitted or stored.</p>
+            <p>
+              Import contact display names if you want. Nothing is transmitted or
+              stored.
+            </p>
           </div>
 
-          <div class="card">
+          <div class="step">
             <h3>Get clear totals</h3>
             <p>See what each person owes, quickly and cleanly.</p>
           </div>
@@ -94,29 +125,29 @@
       </div>
     </section>
 
-    <section class="section section-muted">
+    <!-- Privacy -->
+    <section class="section muted">
       <div class="container">
         <h2>Privacy-first by design</h2>
         <p class="lead">
-          Tabfair does not collect personal information and doesn’t use analytics, ads, or tracking.
-          Everything stays on your device.
+          Tabfair does not collect personal information and doesn’t use analytics,
+          ads, or tracking. Everything stays on your device.
         </p>
-        <a class="text-link" href="/privacy.html">Read the Privacy Policy →</a>
+        <a href="/privacy.html" class="text-link">Read the Privacy Policy →</a>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="/assets/tabfair-icon.png" alt="" class="footer-mark" />
-        <span>© 2026 Tabfair. All rights reserved.</span>
-      </div>
-      <div class="footer-right">
-        <a href="/privacy.html">Privacy Policy</a>
-        <span class="dot">·</span>
-        <a href="/terms.html">Terms of Service</a>
-      </div>
+      <span>© 2026 Tabfair</span>
+      <span class="dot">·</span>
+      <a href="/">Little Useful Apps</a>
+      <span class="dot">·</span>
+      <a href="/privacy.html">Privacy</a>
+      <span class="dot">·</span>
+      <a href="/terms.html">Terms</a>
     </div>
   </footer>
 </body>

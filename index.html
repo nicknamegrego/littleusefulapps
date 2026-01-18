@@ -1,3 +1,4 @@
+<!-- /index.html (Little Useful Apps - Main Home) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,40 +40,45 @@
             <a class="btn btn-ghost" href="#apps">Browse apps</a>
           </div>
 
-          <p class="fineprint">
-            Built in public • Minimal data • Practical by default
-          </p>
+          <p class="fineprint">Built in public • Minimal data • Practical by default</p>
         </div>
 
         <div class="hero-card">
-          <div class="card">
+          <div class="card card-quiet">
             <div class="card-kicker">Now available</div>
             <div class="card-title">Tabfair</div>
             <div class="card-subtitle">Fairly split any tab in seconds.</div>
 
-            <div class="store-row">
-              <img
-                src="/assets/tabfair-icon-web-128.png"
-                alt="Tabfair app icon"
-                class="store-icon"
-              />
-              <a
-                href="https://play.google.com/store/apps/details?id=com.tabfair.app"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                  alt="Get it on Google Play"
-                  class="google-play-badge"
-                />
-              </a>
+            <!-- FIXED PLAY CARD -->
+            <div class="play-card">
+              <img src="/assets/tabfair-icon.png" alt="Tabfair app icon" class="play-app-icon" />
+
+              <div class="play-card-body">
+                <div class="play-card-title">Get it on Google Play</div>
+                <div class="play-card-sub">Privacy-first • runs on-device</div>
+
+                <a
+                  class="play-badge-link"
+                  href="https://play.google.com/store/apps/details?id=com.tabfair.app"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Get Tabfair on Google Play"
+                >
+                  <!-- Put your badge file here -->
+                  <img
+                    src="/assets/google-play-badge.png"
+                    alt="Get it on Google Play"
+                    class="play-badge"
+                  />
+                </a>
+              </div>
             </div>
 
-            <p class="micro-note">
-              Runs fully on-device · No tracking · Optional contact names only<br />
-              <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>
-            </p>
+            <div class="micro-note">
+              Optional contacts names only.
+              <a class="text-link" href="/privacy.html">Privacy</a> ·
+              <a class="text-link" href="/terms.html">Terms</a>
+            </div>
           </div>
         </div>
       </div>
@@ -85,10 +91,10 @@
         <div class="grid-2">
           <article class="app-card">
             <div class="app-card-top">
-              <img src="/assets/tabfair-icon-web-64.png" class="app-icon" alt="Tabfair" />
+              <img src="/assets/tabfair-icon.png" alt="Tabfair" class="app-icon" />
               <div>
-                <h3>Tabfair</h3>
-                <p>Bill splitting that stays on your device.</p>
+                <h3 class="app-title">Tabfair</h3>
+                <p class="app-desc">Bill splitting that stays on your device.</p>
               </div>
             </div>
 
@@ -105,17 +111,17 @@
             </div>
           </article>
 
-          <article class="app-card muted">
+          <article class="app-card">
             <div class="app-card-top">
-              <div class="placeholder-icon">EB</div>
+              <div class="app-icon placeholder-icon">EB</div>
               <div>
-                <h3>EarlyBirthday</h3>
-                <p>Coming soon. Calm reminders.</p>
+                <h3 class="app-title">EarlyBirthday</h3>
+                <p class="app-desc">Coming soon. Reminders that don’t stress you out.</p>
               </div>
             </div>
 
             <div class="app-actions">
-              <span class="btn btn-disabled">Not live yet</span>
+              <a class="btn btn-ghost" href="#" aria-disabled="true" onclick="return false;">Not live yet</a>
             </div>
           </article>
         </div>
@@ -126,14 +132,9 @@
       <div class="container">
         <h2>Built in public</h2>
         <p class="lead">
-          I document the real process — mistakes, tooling, and all.
+          I document the real process—tooling, mistakes, costs, and all.
         </p>
-        <a
-          class="btn btn-primary"
-          href="https://www.youtube.com/@littleusefulapps"
-          target="_blank"
-          rel="noopener"
-        >
+        <a class="btn btn-primary" href="https://www.youtube.com/@littleusefulapps" target="_blank" rel="noopener">
           Watch on YouTube
         </a>
       </div>
@@ -142,10 +143,14 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© 2026 Little Useful Apps</span>
-      <div>
-        <a href="/tabfair/">Tabfair</a> ·
-        <a href="/privacy.html">Privacy</a> ·
+      <div class="footer-left">
+        <span>© 2026 Little Useful Apps</span>
+      </div>
+      <div class="footer-right">
+        <a href="/tabfair/">Tabfair</a>
+        <span class="dot">·</span>
+        <a href="/privacy.html">Privacy</a>
+        <span class="dot">·</span>
         <a href="/terms.html">Terms</a>
       </div>
     </div>

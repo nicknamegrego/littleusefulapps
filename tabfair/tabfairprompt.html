@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabfair — Prompts (Looking Back)</title>
+  <meta name="description" content="The three prompts that compress what building Tabfair actually took." />
+
+  <style>
+    :root{
+      --bg:#fbfbf8;
+      --text:#111;
+      --muted:#555;
+      --line:#e8e6dc;
+      --card:#ffffff;
+      --link:#111;
+      --chip:#f2f0e6;
+      --shadow: 0 1px 0 rgba(0,0,0,.04);
+      --radius:14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.45;
+    }
+    a{ color:var(--link); text-decoration:underline; text-underline-offset:3px; }
+    a:hover{ opacity:.8; }
+
+    .wrap{
+      max-width: 920px;
+      padding: 28px 18px 54px;
+      margin: 0 auto;
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom: 18px;
+    }
+    .crumb{
+      font-size: 14px;
+      color: var(--muted);
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .crumb a{ color: var(--muted); text-decoration:none; }
+    .crumb a:hover{ text-decoration:underline; text-underline-offset:3px; }
+
+    .navlinks{
+      font-size: 14px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .navlinks a{ color: var(--muted); text-decoration:none; }
+    .navlinks a:hover{ text-decoration:underline; text-underline-offset:3px; }
+
+    h1{
+      font-size: 40px;
+      line-height:1.05;
+      margin: 10px 0 10px;
+      letter-spacing:-.02em;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 18px;
+      max-width: 75ch;
+    }
+    .chips{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin: 10px 0 22px;
+    }
+    .chip{
+      background: var(--chip);
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      box-shadow: var(--shadow);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 860px){
+      .grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .span2{ grid-column: span 2; }
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .cardhead{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom: 10px;
+    }
+    .kicker{
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 2px;
+    }
+    .cardtitle{
+      font-size: 16px;
+      font-weight: 650;
+      margin: 0;
+      letter-spacing: -.01em;
+    }
+    .btnrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      appearance:none;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 13px;
+      cursor:pointer;
+      box-shadow: var(--shadow);
+      color: var(--text);
+      white-space:nowrap;
+    }
+    .btn:hover{ opacity:.9; }
+    .btn:active{ transform: translateY(1px); }
+
+    pre{
+      margin:0;
+      padding: 14px;
+      background: #0f1115;
+      color: #e8e8e8;
+      border-radius: 12px;
+      overflow:auto;
+      border: 1px solid rgba(255,255,255,.06);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .note{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 80ch;
+    }
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin: 18px 0 14px;
+    }
+    footer{
+      margin-top: 22px;
+      font-size: 14px;
+      color: var(--muted);
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      background: #111;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events:none;
+      transition: opacity .18s ease;
+    }
+    .toast.show{ opacity: .92; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="crumb">
+        <a href="/">Little Useful Apps</a>
+        <span aria-hidden="true">›</span>
+        <a href="/tabfair/">Tabfair</a>
+        <span aria-hidden="true">›</span>
+        <span>Prompts</span>
+      </div>
+
+      <nav class="navlinks" aria-label="Tabfair links">
+        <a href="/tabfair/privacy.html">Privacy</a>
+        <a href="/tabfair/terms.html">Terms</a>
+      </nav>
+    </div>
+
+    <h1>The prompts that make it look easy.</h1>
+    <p class="sub">
+      These are the three “finish line” prompts for Tabfair. They read clean, because the messy part already happened.  Your mileage may vary if you use this, and my guess is you will still have to reiterate.
+    </p>
+
+    <div class="chips" aria-label="Context">
+      <div class="chip">Looking back</div>
+      <div class="chip">Reference only</div>
+      <div class="chip">Compressed output</div>
+    </div>
+
+    <div class="grid">
+      <!-- Prompt 1 -->
+      <section class="card span2" aria-label="Prompt 1">
+        <div class="cardhead">
+          <div>
+            <p class="kicker">Prompt 1</p>
+            <p class="cardtitle">Core App + Edge Cases</p>
+          </div>
+          <div class="btnrow">
+            <button class="btn" type="button" data-copy="p1">Copy prompt</button>
+          </div>
+        </div>
+
+        <pre id="p1">"Build a 4-step bill splitter: 1) Subtotal/Tax input, 2) Tip (pre/post-tax toggle), 3) Split type (even/custom), 4) Results. Include: multi-currency support with persistence, editable people count, and custom splits by amount OR percentage. Critical: When dividing unevenly, distribute leftover cents (0.01 increments) to the first N people—never show a 'remaining' amount."</pre>
+
+        <p class="note">
+          The “leftover cents” rule is the kind of thing that took real time to get right — but in a prompt it’s just one sentence.
+        </p>
+      </section>
+
+      <!-- Prompt 2 -->
+      <section class="card" aria-label="Prompt 2">
+        <div class="cardhead">
+          <div>
+            <p class="kicker">Prompt 2</p>
+            <p class="cardtitle">Pro Features + Rounding</p>
+          </div>
+          <div class="btnrow">
+            <button class="btn" type="button" data-copy="p2">Copy prompt</button>
+          </div>
+        </div>
+
+        <pre id="p2">"Add Pro tier (product ID 'tabfairpro') gating: saved preferences, advanced rounding modes (up, nearest-half, nearest-whole). Rounding surplus goes to tip, not bill total. Label clearly as 'Round tip UP to whole [currency unit]'."</pre>
+
+        <p class="note">
+          The key detail here: rounding “surplus” goes to the tip — not the bill total — so totals stay honest and predictable.
+        </p>
+      </section>
+
+      <!-- Prompt 3 -->
+      <section class="card" aria-label="Prompt 3">
+        <div class="cardhead">
+          <div>
+            <p class="kicker">Prompt 3</p>
+            <p class="cardtitle">Native + Contacts</p>
+          </div>
+          <div class="btnrow">
+            <button class="btn" type="button" data-copy="p3">Copy prompt</button>
+          </div>
+        </div>
+
+        <pre id="p3">"Add Capacitor contacts picker for naming splits. Prevent duplicates: case-insensitive check against existing names. All toast notifications must be position: 'top-center' for mobile visibility."</pre>
+
+        <p class="note">
+          Small UX stuff like “top-center toasts” sounds trivial until you’re trying to see them on an actual phone.
+        </p>
+      </section>
+    </div>
+
+    <div class="divider"></div>
+
+    <section class="card" aria-label="Notes">
+      <div class="cardhead">
+        <div>
+          <p class="kicker">Note</p>
+          <p class="cardtitle">What these prompts don’t show</p>
+        </div>
+        <div class="btnrow">
+          <button class="btn" type="button" id="copyAll">Copy all prompts</button>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:0;">
+        If you copied these, you’d still run into the same walls of platform issues, UI decisions, edge cases, and the “almost there, but not quite” fixes that don’t fit neatly into a prompt.
+      </p>
+
+      <p class="note">
+        Back to Tabfair: <a href="/tabfair/">/tabfair/</a>
+      </p>
+    </section>
+
+    <footer>
+      <span>© 2026 Tabfair</span>
+      <span aria-hidden="true">·</span>
+      <a href="/">Little Useful Apps</a>
+      <span aria-hidden="true">·</span>
+      <a href="/tabfair/privacy.html">Privacy</a>
+      <span aria-hidden="true">·</span>
+      <a href="/tabfair/terms.html">Terms</a>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+
+  <script>
+    const toast = document.getElementById("toast");
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      window.setTimeout(() => toast.classList.remove("show"), 900);
+    }
+
+    async function copyText(text){
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast("Copied");
+      } catch (e) {
+        // Fallback for older browsers
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        showToast("Copied");
+      }
+    }
+
+    document.querySelectorAll("[data-copy]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-copy");
+        const el = document.getElementById(id);
+        copyText(el.innerText.trim());
+      });
+    });
+
+    document.getElementById("copyAll").addEventListener("click", () => {
+      const all = [
+        "Prompt 1 - Core App + Edge Cases:\n\n" + document.getElementById("p1").innerText.trim(),
+        "Prompt 2 - Pro Features + Rounding:\n\n" + document.getElementById("p2").innerText.trim(),
+        "Prompt 3 - Native + Contacts:\n\n" + document.getElementById("p3").innerText.trim(),
+      ].join("\n\n---\n\n");
+      copyText(all);
+    });
+  </script>
+</body>
+</html>
